@@ -1,3 +1,3 @@
 <?php
-	include 'user1_conn.php'
+	include 'newUser.php';
 ?>
