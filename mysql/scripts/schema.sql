@@ -26,5 +26,7 @@ CREATE TABLE commentaire (
 	description		VARCHAR(100) NOT NULL,
 	utilisateur_id	INTEGER NOT NULL,
 	PRIMARY KEY(id),
-	FOREIGN KEY(utilisateur_id) REFERENCES utilisateur(id)
+	FOREIGN KEY(utilisateur_id) REFERENCES utilisateur(id) ON DELETE CASCADE
 );
+
+CREATE VIEW utilisateurView AS SELECT id, nom, prenom, date_naissance, ville FROM utilisateur;

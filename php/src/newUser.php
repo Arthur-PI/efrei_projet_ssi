@@ -35,6 +35,7 @@
             $query->bindParam(4, $date_naissance);
             $query->bindParam(5, $ville);
             $query->execute();
+            echo "<script>alert('User sucessfully added to the database');</script>";
         } catch (PDOException $e) {
             die("Error: " . $e->getMessage());
         }
@@ -45,12 +46,12 @@
         <h1>Ajouter un nouvel utilisateur</h1>
         <form action="newUser.php" method="POST">
             <div>
-                Nom: 
-                <input type="text" name="nom" required>
-            </div>
-            <div>
                 Prenom: 
                 <input type="text" name="prenom" required>
+            </div>
+            <div>
+                Nom: 
+                <input type="text" name="nom" required>
             </div>
             <div>
                 Numero de carte bleu:
